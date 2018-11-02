@@ -48,6 +48,7 @@ const commands = {
   addLabel (message, body) {
     if (!message.labels.includes(body.label)) {
       message.labels.push(body.label)
+      message.labels.sort()
     }
   },
 
