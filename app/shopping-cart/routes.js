@@ -43,14 +43,10 @@ router.post('/products/:productId/items', (req, res, next) => {
   res.json(item)
 })
 
-router.delete('/products/:productId/items/:itemId', (req, res, next) => {
-  const item = db.products.find(req.params.itemId)
-  if (item) {
-    db.items.delete(req.params.itemId)
-  }
-
-  res.status(200)
-  res.end()
+router.delete('/items/:id', (req, res, next) => {
+  const item = db.items.find(req.params.id)
+  db.items.delete(req.params.id)
+  res.sendStatus(200)
 })
 
 module.exports = router
