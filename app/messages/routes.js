@@ -33,27 +33,27 @@ router.patch('/messages', (req, res, next) => {
 })
 
 const commands = {
-  star (message, cmd) {
+  star (message, body) {
     message.starred = !message.starred
   },
 
-  delete (message, cmd) {
+  delete (message, body) {
     db.messages.delete(message.id)
   },
 
-  read (message, cmd) {
-    message.read = cmd.read
+  read (message, body) {
+    message.read = body.read
   },
 
-  addLabel (message, cmd) {
-    if (!message.labels.includes(cmd.label)) {
-      message.labels.push(cmd.label)
+  addLabel (message, body) {
+    if (!message.labels.includes(body.label)) {
+      message.labels.push(body.label)
     }
   },
 
-  removeLabel (message, cmd) {
-    if (message.labels.includes(cmd.label)) {
-      message.labels.splice(message.labels.indexOf(cmd.label), 1)
+  removeLabel (message, body) {
+    if (message.labels.includes(body.label)) {
+      message.labels.splice(message.labels.indexOf(body.label), 1)
     }
   },
 }
