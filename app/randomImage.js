@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
   const fetchUrl = `${API_URL}&w=${w}&h=${h}`;
   try {
     const response = await fetch(fetchUrl).then(r => r.json());
-    const img_url = response.urls.raw;
+    const img_url = response.urls.custom;
     res.send({ img_url });
   }
   catch (err) {
