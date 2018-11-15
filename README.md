@@ -8,3 +8,7 @@ This API was created to by Galvanize be used in our assignments. I made modifica
 $ npm install
 $ npm run dev
 ```
+
+### External API's
+
+/app/randomImage.js uses the [Unsplash API](https://unsplash.com/developers) to generate a URL for a random photo.
