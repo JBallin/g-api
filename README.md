@@ -11,4 +11,4 @@ $ npm run dev
 
 ### External API's
 
-/app/randomImage.js uses the [Unsplash API](https://unsplash.com/developers) to generate a URL for a random photo.
+The `/app/randomImage.js` route uses the [Unsplash API](https://unsplash.com/developers) to generate a URL for a random photo.
