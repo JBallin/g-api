@@ -1,6 +1,6 @@
 # Galvanize API
 
-This API was created to by Galvanize be used in our assignments. I made modifications that fix mistakes and add features.
+This API was created by Galvanize to be used in our assignments. I made modifications that fix mistakes and add features.
 
 ### Usage
 
